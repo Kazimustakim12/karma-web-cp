@@ -1,8 +1,8 @@
 export const LogoSvg = ({ className, ...props }: { className: string }) => {
   return (
     <svg
-      width="459"
-      height="392"
+      width="100%"
+      height="100%"
       viewBox="0 0 459 392"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

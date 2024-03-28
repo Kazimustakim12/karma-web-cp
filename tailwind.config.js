@@ -9,6 +9,8 @@ export default {
   theme: {
     fontFamily: {
       blinker: ["Inter", "sans-serif"],
+      soria: ["soria", "sans-serif"],
+      bronova: ["bronova", "sans-serif"],
     },
     container: {
       // you can configure the container to be centered
