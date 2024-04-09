@@ -3,12 +3,16 @@ import { LogoSvg } from "./IconsSVg";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import InfiniteMenu from "../../utils/InfiniteScroll";
 interface navPath {
   id: number;
   path: string;
   name: string;
   subItemsOf?: string;
 }
+gsap.registerPlugin(ScrollTrigger);
+
 const Header = () => {
   const navPath: navPath[] = [
     { id: 1, path: "/", name: "Property" },
@@ -22,21 +26,16 @@ const Header = () => {
   const svgStart = "M 0 100 V 50 Q 50 0 100 50 V 100 z";
   const svgEnd = "M 0 100 V 0 Q 50 0 100 0 V 100 z";
   const menuOpentl = useRef();
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   useGSAP(
     () => {
+      // const menu = new InfiniteMenu(document.querySelector(".menu-copy"))  ;
       gsap.set(".menu-link-item-holder", { y: 100 });
       menuOpentl.current = gsap
         .timeline({ paused: true })
-        // .to(".menu-open", {
-        //   duration: 0.3,
-        //   opacity: 0,
-        //   ease: "Power1.out",
-        // })
         .to(".menu-overlayer", {
           duration: 0,
           clipPath: "polygon(0% 0% ,100% 0%, 100% 100% ,0% 100%)",
@@ -75,11 +74,11 @@ const Header = () => {
 
   return (
     <div className="menu-container relative" ref={container}>
-      <div className="menu-bar">
-        <div className="w-full  px-16 py-9  justify-between items-center inline-flex  relative">
+      <div className="menu-bar translate-y-[-60px] opacity-0">
+        <div className="w-full px-16 py-5 justify-between items-center inline-flex relative ">
           <div className="justify-start items-center gap-2.5 flex karma-logo">
             <Link to={"/"} className="flex gap-2 ">
-              <LogoSvg className=" stroke-primary-500  w-9 h-9" />
+              <LogoSvg className="stroke-primary-500 w-9 h-9" />
               <h1 className="text-primary-500 uppercase text-3xl font-bold tracking-[10px] font-['Inter']">
                 KARMA
               </h1>
@@ -125,7 +124,7 @@ const Header = () => {
         </svg>
         <div className="absolute w-full h-screen top-0 left-0 w">
           <div className="menu-overlayer-bar">
-            <div className="w-full  px-16 py-9  justify-between items-center inline-flex z-50 relative">
+            <div className="w-full  px-16 py-5  justify-between items-center inline-flex z-50 relative">
               <div className="justify-start items-center gap-2.5 flex karma-logo">
                 <Link to={"/"} className="flex gap-2 ">
                   <LogoSvg className=" stroke-primary-500  w-9 h-9" />

@@ -18,7 +18,7 @@ export default class InfiniteMenu {
   constructor(el) {
     if (!isMobile) {
       this.DOM = { el: el };
-      this.DOM.menuItems = [...this.DOM.el.querySelectorAll(".loop_item")];
+      this.DOM.menuItems = [...this.DOM.el.querySelectorAll(".menu-link-item")];
 
       this.cloneItems();
       this.initScroll();
