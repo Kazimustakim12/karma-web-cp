@@ -43,9 +43,9 @@
     @apply z-[9999] fixed left-0 top-0 h-3 w-3 rounded-full pointer-events-none opacity-0 transition-opacity    delay-500 translate-x-[-50%] translate-y-[-50%];
   } */
 
-  /* .imgWrapper {
+  .img-wrraper-div {
     perspective: 500px;
-  } */
+  }
 
   .menu-overlayer {
     clip-path: polygon(00% 0%, 100% 0%, 100% 0%, 0% 0%);

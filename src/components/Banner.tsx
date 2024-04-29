@@ -8,10 +8,13 @@ gsap.registerPlugin(Flip);
 const Banner = () => {
   const BannerSection = useRef(null);
   const revelbannerImg = useRef();
+  const htmlTag = document.querySelector("html.lenis");
 
   useEffect(() => {}, []);
 
   useGSAP(() => {
+    htmlTag?.classList.add("overflow-hidden");
+
     const pinBannerAndMOveImages = () => {
       return gsap
         .timeline({
@@ -56,6 +59,27 @@ const Banner = () => {
         )
         .to("#codeby .para", { y: 0, opacity: 1, stagger: 0.2 }, 0.5);
     };
+
+    const pinnListHorizontalCard = () => {
+      const HorizontalSectionPin = document.querySelector("#section_pin");
+
+      const containerAnimation = gsap.to(HorizontalSectionPin, {
+        scrollTrigger: {
+          trigger: "#section_to-pin",
+          start: "top top",
+          end: () => "+=" + HorizontalSectionPin?.offsetWidth,
+          pin: true,
+          scrub: true,
+        },
+        x: () =>
+          -(
+            HorizontalSectionPin.scrollWidth -
+            document.documentElement.clientWidth
+          ) + "px",
+        ease: "none",
+      });
+    };
+
     const initial_img = document.querySelector(".imgWrapper");
     const myText = new SplitType(".head-text");
     const headerRevel = () => {
@@ -91,10 +115,13 @@ const Banner = () => {
         stagger: 0.15,
         ease: "expo.inOut",
         onComplete: () => {
+          htmlTag?.classList.remove("overflow-hidden");
           pinBannerAndMOveImages();
+          pinnListHorizontalCard();
         },
       });
     };
+
     const revelText = () => {
       return gsap.to(".char", {
         y: 0,
@@ -103,6 +130,7 @@ const Banner = () => {
         duration: 0.3,
         onComplete: () => {
           headerRevel();
+          gsap.to(".revel-logo", { y: 0, opacity: 1 });
         },
       });
     };
@@ -113,7 +141,7 @@ const Banner = () => {
         ease: "Power3.inOut",
         repeat: 0,
         yoyo: false,
-        delay: 4,
+        delay: 1,
       },
     });
     imageAnimation
@@ -142,57 +170,19 @@ const Banner = () => {
           onComplete: () => {
             moveImgToCenter();
             revelText();
-            logoChanger.to(".logo-changer", {
-              scale: 1,
-              opacity: 1,
-              width: "160px",
-              display: "block",
-              rotate: 180,
-              delay: 0.5,
-            });
           },
         },
         0
-      );
-    const logoChanger = gsap.timeline({ repeat: 0, yoyo: false });
-    logoChanger
-      .set(
-        [
-          ".logo-changer  .logo-animation-1",
-          ".logo-changer  .logo-animation-2",
-        ],
-        {
-          strokeDasharray: "798.3514404296875px",
-        }
-      )
-      .fromTo(
-        [".logo-animation-1", ".logo-animation-2"],
-        3,
-        {
-          strokeDashoffset: "798.3514404296875px",
-        },
-        {
-          strokeDashoffset: "0px",
-          onComplete: () => {
-            logoChanger.to(".logo-changer", {
-              scale: 15,
-              opacity: 0,
-              width: "160px",
-              display: "none",
-              rotate: 180,
-            });
-          },
-        }
       );
   });
   return (
     <>
       <div
         id="ImgWrapper"
-        className="imgWrapper relative  h-screen overflow-hidden bg-transparent  flex items-center justify-center initial_img"
+        className="imgWrapper relative my-10  h-screen overflow-hidden bg-transparent  flex items-center justify-center initial_img"
         ref={BannerSection}
       >
-        <div className="absolute text-center flex flex-col justify-center items-center  z-10 overflow-visible w-full h-screen">
+        <div className="absolute text-center flex flex-col justify-center items-center  z-10 overflow-visible w-full h-screen img-wrraper-div">
           <div className="img-revel-wrapper z-[3]" id="img1">
             <img
               className="object-cover w-56 h-[20rem] "
@@ -230,16 +220,15 @@ const Banner = () => {
             />
           </div>
           <div className="flex flex-col items-center justify-center center-para z-10">
-            <div className="z-10 relative">
-              <LogoSvg
-                className=" stroke-primary-500  
-             drop-banner-shadow logo-changer w-60  scale-150"
-              />
-            </div>
-            <h1 className="z-10 text-[20vh] text-primary-500 font-semibold uppercase tracking-[35px] leading-[170px] drop-banner-shadow font-bronova head-text">
+            <LogoSvg
+              className=" stroke-primary-500  
+             drop-banner-shadow  xl:w-60 lg:w-[180px]  w-24 h-auto opacity-0 translate-y-[50px] revel-logo"
+            />
+
+            <h1 className="z-10 xl:text-[20vh] lg:text-[15vh] md:text-[10vh] text-[8vh] text-primary-500 font-semibold uppercase tracking-[15px] md:tracking-[35px] leading-[100px] md:leading-[170px] drop-banner-shadow font-bronova head-text">
               KARMA
             </h1>
-            <p className="z-10 text-[6vh]  text-primary-500 tracking-[25px] font-soria leading-none head-text drop-banner-shadow">
+            <p className="z-10 xl:text-[6vh] lg:text-[8vh] text-primary-500 tracking-[25px] font-soria leading-none head-text drop-banner-shadow">
               REALL STATES
             </p>
           </div>
@@ -250,7 +239,10 @@ const Banner = () => {
         >
           <h4
             data-cursor-text="karma"
-            className="opacity-0 para translate-y-[130px] text-xl "
+            className="opacity-0 para translate-y-[130px]  lg:text-xl font-blinker font-bold text-primary-500 text-center xl:text-2xl
+            uppercase
+            leading-[30.35px]
+            tracking-[5px]"
             data-cursor="-color-accent-lilac"
           >
             Experience exceptional peace of mind with KARMA today!

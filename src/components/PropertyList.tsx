@@ -7,9 +7,12 @@ const PropertyList = () => {
       id="section_to-pin"
       className="grid-container full section section_to-pin four"
     >
-      <div id="section_pin" className="section_pin">
-        <div className="content_wrapper">
-          <h1 className="text-3xl font-blinker font-bold text-primary-500">
+      <div
+        id="section_pin"
+        className="section_pin h-screen flex justify-start items-center md:pt-[120px] md:pl-[12vw] md:pb-[120px] md:pr-[12vw] pt-[30px] pl-0 pb-[60px] pr-0"
+      >
+        <div className="content_wrapper md:min-w-[700px] min-w-[100vw] pr-0 text-center">
+          <h1 className="xl:text-3xl lg:text-2xl text-2xl font-blinker font-bold text-primary-500">
             Recent New Property
           </h1>
         </div>
@@ -34,8 +37,47 @@ const PropertyList = () => {
             alt="Lil' Image"
           />
         </div> */}
-        <div id="cards_wrapper" className="propertyCard_wrapper ">
-          <Card />
+        <div id="cards_wrapper" className="propertyCard_wrapper flex gap-4">
+          <Card
+            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
+            location="GOZO - MALTA"
+            info="This revamp wasn’t just about paint and pillows; it’s about
+                injecting personality, excitement, and a touch of magic into the
+                property, all thanks to the power of our art-inspired design
+                approach."
+          />
+          <Card
+            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
+            location="GOZO - MALTA"
+            info="This revamp wasn’t just about paint and pillows; it’s about
+                injecting personality, excitement, and a touch of magic into the
+                property, all thanks to the power of our art-inspired design
+                approach."
+          />
+          <Card
+            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
+            location="GOZO - MALTA"
+            info="This revamp wasn’t just about paint and pillows; it’s about
+                injecting personality, excitement, and a touch of magic into the
+                property, all thanks to the power of our art-inspired design
+                approach."
+          />
+          <Card
+            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
+            location="GOZO - MALTA"
+            info="This revamp wasn’t just about paint and pillows; it’s about
+                injecting personality, excitement, and a touch of magic into the
+                property, all thanks to the power of our art-inspired design
+                approach."
+          />
+          <Card
+            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
+            location="GOZO - MALTA"
+            info="This revamp wasn’t just about paint and pillows; it’s about
+                injecting personality, excitement, and a touch of magic into the
+                property, all thanks to the power of our art-inspired design
+                approach."
+          />
         </div>
       </div>
     </section>

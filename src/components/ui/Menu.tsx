@@ -192,7 +192,7 @@
 //                     <Link
 //                       to={item.path}
 //                       key={item.id}
-//                       className="p-0 menu-link text-orange-200  font-bold font-['Inter'] uppercase tracking-widest  group-hover:text-white transition text-[7vh]  relative  block "
+//                       className="p-0 menu-link text-primary-500  font-bold font-['Inter'] uppercase tracking-widest  group-hover:text-white transition text-[7vh]  relative  block "
 //                     >
 //                       {item.name}
 //                     </Link>

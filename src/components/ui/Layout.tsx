@@ -4,37 +4,34 @@ import Header from "./Header";
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 // import Menu from "./Menu";
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  useEffect(() => {
-    // const lenis = new Lenis({
-    //   duration: 0.7,
-    //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    //   infinite: false,
-    // });
-    // lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-    //   console.log({ scroll, limit, velocity, direction, progress });
-    //   ScrollTrigger.update();
-    // });
-    // gsap.ticker.add((time) => {
-    //   lenis.raf(time * 1000);
-    // });
-    // gsap.ticker.lagSmoothing(0);
-    // const lenis = new Lenis({
-    //   smoothWheel: true,
-    //   duration: 3,
-    // });
-    // lenis.on("scroll", ScrollTrigger.update);
-    // gsap.ticker.add((time) => {
-    //   lenis.raf(time * 1000);
-    // });
-    // gsap.ticker.lagSmoothing(0);
-  }, []);
+  useEffect(() => {}, []);
+  useGSAP(() => {
+    const headerRevel = () => {
+      return gsap.to(".menu-bar", {
+        duration: 1,
+        y: 0,
+        opacity: 1,
+        delay: 1,
+      });
+    };
+    // const animateLayoutAfterLoad = gsap.timeline({ repeat: 0, yoyo: false });
+    // animateLayoutAfterLoad.fromTo(
+    //   ".animate-layout",
+    //   { opacity: 0 },
+    //   { opacity: 1 }
+    // );
+    headerRevel();
+  });
   return (
-    <div className="bg-text-black relative">
-      <Header />
-      {children}
-      <Footer />
+    <div className="bg-text-black relative bg-[url('/assets/images/bg-cloud.jpg')] bg-center bg-cover bg-blend-luminosity bg-fixed animate-layout">
+      <div className=" bg-text-black bg-opacity-70">
+        <Header />
+        {children}
+        <Footer />
+      </div>
     </div>
   );
 };
