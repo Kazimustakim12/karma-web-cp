@@ -20,7 +20,7 @@ const Card = ({
                   {location}
                 </div>
               </div>
-              <div className="max-w-[635px] text-white xl:text-[25px] lg:text-[20px] text-[16px] font-bold font-['Inter'] uppercase tracking-[5px]">
+              <div className="max-w-[635px] text-white xl:text-[25px] md:text-[20px] text-[16px] font-bold font-['Inter'] uppercase tracking-[5px]">
                 {title}
               </div>
               <div className="max-w-[441px] text-white text-xs font-normal font-['Inter']">

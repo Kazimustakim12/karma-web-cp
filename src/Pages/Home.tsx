@@ -17,25 +17,25 @@ const Home = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 3200);
+    }, 4500);
     AnimationUtils.initializeScrollTrigger();
   }, []); // Empty dependency array ensures the effect runs only once, similar to componentDidMount
   console.log("================================", isLoading);
   return (
-    // <SmoothScrolling>
-    <>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <>
-          <Banner />
-          <PropertyList />
-          <ApprochTab />
-          <HoverExpandImages />
-        </>
-      )}
-    </>
-    // </SmoothScrolling>
+    <SmoothScrolling>
+      <>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            <Banner />
+            <PropertyList />
+            <ApprochTab />
+            <HoverExpandImages />
+          </>
+        )}
+      </>
+    </SmoothScrolling>
   );
 };
 

@@ -179,7 +179,7 @@ const Banner = () => {
     <>
       <div
         id="ImgWrapper"
-        className="imgWrapper relative my-10  h-screen overflow-hidden bg-transparent  flex items-center justify-center initial_img"
+        className="imgWrapper relative   h-screen overflow-hidden bg-transparent  flex items-center justify-center initial_img"
         ref={BannerSection}
       >
         <div className="absolute text-center flex flex-col justify-center items-center  z-10 overflow-visible w-full h-screen img-wrraper-div">
@@ -228,7 +228,7 @@ const Banner = () => {
             <h1 className="z-10 xl:text-[20vh] lg:text-[15vh] md:text-[10vh] text-[8vh] text-primary-500 font-semibold uppercase tracking-[15px] md:tracking-[35px] leading-[100px] md:leading-[170px] drop-banner-shadow font-bronova head-text">
               KARMA
             </h1>
-            <p className="z-10 xl:text-[6vh] lg:text-[8vh] text-primary-500 tracking-[25px] font-soria leading-none head-text drop-banner-shadow">
+            <p className="z-10 xl:text-[6vh] lg:text-[8vh] text-xl text-primary-500 tracking-[25px] font-soria leading-none head-text drop-banner-shadow">
               REALL STATES
             </p>
           </div>

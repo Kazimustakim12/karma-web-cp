@@ -31,7 +31,8 @@ const Loader = () => {
                 width: "160px",
                 display: "none",
                 rotate: 180,
-                ease: "easeOut",
+                duration: 1,
+                ease: "easeInOut",
               })
               .to(".loader-div", {
                 opacity: 0,
@@ -39,7 +40,7 @@ const Loader = () => {
                 display: "none",
                 delay: 0.2,
                 duration: 1,
-                ease: "easeOut",
+                ease: "easeInOut",
 
                 onComplete: () => {},
               });

@@ -48,7 +48,7 @@ const HoverExpandImages = () => {
             >
               <a
                 href={item.url}
-                className="justify-start  md:flex-row flex-col-reverse  gap-2.5  opacity-0 transition-all duration-700 hidden group-hover:opacity-100 delay-700 group-hover:flex md:items-center items-baseline"
+                className="justify-start  md:flex-row flex-col-reverse  gap-2.5  opacity-0 transition-all group-hover:delay-700 hidden group-hover:opacity-100 delay-700 group-hover:flex md:items-center items-baseline"
               >
                 <div className="flex-col justify-start items-start gap-[5px] inline-flex">
                   <div className="max-w-[635px] text-white xl:text-[25px] lg:text-[20px] sm:text-[18px] text-[15px] font-bold font-['Inter'] uppercase tracking-[5px]">
