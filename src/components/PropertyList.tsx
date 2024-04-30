@@ -5,14 +5,19 @@ const PropertyList = () => {
   return (
     <section
       id="section_to-pin"
-      className="grid-container full section section_to-pin four"
+      className="grid-container full section section_to-pin four h-full left-0 flex items-center justify-start overflow-hidden"
     >
       <div
         id="section_pin"
-        className="section_pin h-screen flex justify-start items-center md:pt-[120px] md:pl-[12vw] md:pb-[120px] md:pr-[12vw] pt-[30px] pl-0 pb-[60px] pr-0"
+        className="section_pin h-svh flex justify-start items-center md:pt-[120px] md:pl-[12vw] md:pb-[120px] md:pr-[12vw] pt-[30px] pl-0 pb-[60px] pr-0"
       >
-        <div className="content_wrapper md:min-w-[700px] min-w-[100vw] pr-0 text-center">
-          <h1 className="xl:text-3xl lg:text-2xl text-2xl font-blinker font-bold text-primary-500">
+        <div className="content_wrapper md:min-w-[80vw] min-w-[100vw] pr-0 text-center">
+          <h1
+            className="lg:text-xl font-blinker font-bold text-primary-500 text-center xl:text-2xl
+            uppercase
+            leading-[30.35px]
+            tracking-[5px]"
+          >
             Recent New Property
           </h1>
         </div>

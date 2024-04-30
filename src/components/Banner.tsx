@@ -159,6 +159,7 @@ const Banner = () => {
           yPercent: 100,
           scale: 1.15,
           opacity: 1,
+          boxShadow: "10px 0px 20px #000000a1",
         },
         0
       )
@@ -179,10 +180,10 @@ const Banner = () => {
     <>
       <div
         id="ImgWrapper"
-        className="imgWrapper relative   h-screen overflow-hidden bg-transparent  flex items-center justify-center initial_img"
+        className="imgWrapper relative   h-svh overflow-hidden bg-transparent  flex items-center justify-center initial_img"
         ref={BannerSection}
       >
-        <div className="absolute text-center flex flex-col justify-center items-center  z-10 overflow-visible w-full h-screen img-wrraper-div">
+        <div className="absolute text-center flex flex-col justify-center items-center  z-10 overflow-visible w-full h-svh img-wrraper-div">
           <div className="img-revel-wrapper z-[3]" id="img1">
             <img
               className="object-cover w-56 h-[20rem] "
@@ -220,22 +221,19 @@ const Banner = () => {
             />
           </div>
           <div className="flex flex-col items-center justify-center center-para z-10">
-            <LogoSvg
-              className=" stroke-primary-500  
-             drop-banner-shadow  xl:w-60 lg:w-[180px]  w-24 h-auto opacity-0 translate-y-[50px] revel-logo"
-            />
+            <LogoSvg className=" stroke-primary-500 drop-banner-shadow  xl:w-60 lg:w-[200px]  sm:w-[160px] w-[126px] h-auto opacity-0 translate-y-[50px] revel-logo mb-[30px]" />
 
-            <h1 className="z-10 xl:text-[20vh] lg:text-[15vh] md:text-[10vh] text-[8vh] text-primary-500 font-semibold uppercase tracking-[15px] md:tracking-[35px] leading-[100px] md:leading-[170px] drop-banner-shadow font-bronova head-text">
+            <h1 className="z-10 xl:text-[20vh] lg:text-[15vh] md:text-[10vh] text-[8vh] text-primary-500 font-semibold uppercase tracking-[15px] md:tracking-[35px] xl:leading-[160px]  drop-banner-shadow font-bronova head-text">
               KARMA
             </h1>
-            <p className="z-10 xl:text-[6vh] lg:text-[8vh] text-xl text-primary-500 tracking-[25px] font-soria leading-none head-text drop-banner-shadow">
-              REALL STATES
+            <p className="z-10 xl:text-[6vh] lg:text-[3vh] text-xl text-primary-500 md:tracking-[25px] tracking-[10px] indent-[0px] font-soria leading-none head-text drop-banner-shadow">
+              REAL ESTATES
             </p>
           </div>
         </div>
         <div
           id="codeby"
-          className="h-screen flex items-center justify-center z-10"
+          className="h-svh flex items-center justify-center z-10"
         >
           <h4
             data-cursor-text="karma"

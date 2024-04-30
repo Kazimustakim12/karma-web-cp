@@ -8,6 +8,8 @@ import Layout from "./components/ui/Layout";
 import Holiday from "./Pages/Holiday";
 import LongTermRental from "./Pages/LongTermRental";
 import PropertyManagement from "./Pages/PropertyManagement";
+import Blog from "./Pages/Blog";
+import BlogDetailPage from "./Pages/BlogDetailPage";
 function App() {
   return (
     <>
@@ -26,6 +28,8 @@ function App() {
                 path="/property-management"
                 element={<PropertyManagement />}
               ></Route>
+              <Route path="/blog" element={<Blog />}></Route>
+              <Route path="/blog/:slug" element={<BlogDetailPage />}></Route>
               <Route path="*" element={<PageNotFound />} />
             </Route>
           </Routes>

@@ -31,7 +31,7 @@
   }
 
   body {
-    @apply text-white min-h-screen font-blinker;
+    @apply text-white min-h-svh font-blinker;
   }
   ul {
     @apply list-none pl-4;
@@ -66,16 +66,16 @@
     @apply list-disc;
   }
   .post-content ul li {
-    @apply list-disc list-item marker:text-primary-600;
+    @apply list-disc list-item;
   }
   .post-content .wp-block-quote {
-    @apply p-4 my-4 border-s-4 border-primary-600 bg-primary-500 rounded-lg;
+    @apply p-4 my-4 border-s-4 border-primary-500 bg-primary-500 rounded-lg;
   }
   .post-content .wp-block-quote p {
     @apply italic mb-4 text-xl  relative;
   }
   .post-content .wp-block-quote cite {
-    @apply not-italic text-sm relative pl-5 before:absolute before:top-[50%] before:left-0 before:w-3 before:h-[2px] before:bg-primary-600;
+    @apply not-italic text-sm relative pl-5 before:absolute before:top-[50%] before:left-0 before:w-3 before:h-[2px] before:bg-primary-500;
   }
   .post-content .is-layout-flex {
     @apply flex;
@@ -96,10 +96,10 @@
     @apply sm:flex items-center gap-6;
   }
   .post-content .wp-block-file__button {
-    @apply p-2 px-3  rounded-md bg-primary-600 text-white mx-2;
+    @apply p-2 px-3  rounded-md bg-primary-500 text-white mx-2;
   }
   .post-content table {
-    @apply bg-white border border-collapse border-slate-400 shadow-sm text-sm w-full;
+    @apply bg-white border border-collapse  shadow-sm text-sm w-full;
   }
   .post-content thead th {
     @apply px-6 py-3;
@@ -117,7 +117,7 @@
     @apply border-gray-200 border-b;
   }
   .post-content details summary {
-    @apply flex items-center font-bold cursor-pointer mb-2 marker:text-primary-600 marker:visible;
+    @apply flex items-center font-bold cursor-pointer mb-2 marker:text-primary-500 marker:visible;
   }
   .post-content details summary ~ * {
     @apply mb-4;

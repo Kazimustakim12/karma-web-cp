@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import Footer from "./Footer";
-import Header from "./Header";
-import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Header from "./Header";
 // import Menu from "./Menu";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {}, []);

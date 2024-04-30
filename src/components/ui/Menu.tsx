@@ -105,9 +105,9 @@
 //           </div>
 //         </div>
 //       </div>
-//       <div className="menu-overlayer  fixed top-0 left-0 w-screen h-screen  bg-transparent z-30 flex flex-col">
+//       <div className="menu-overlayer  fixed top-0 left-0 w-screen h-svh  bg-transparent z-30 flex flex-col">
 //         {/* <svg
-//           className="transition bg-svg-ani w-screen h-screen"
+//           className="transition bg-svg-ani w-screen h-svh"
 //           viewBox="0 0 100 100"
 //           preserveAspectRatio="none"
 //         >
@@ -124,7 +124,7 @@
 //           </animateMotion>
 //         </svg> */}
 //         <svg
-//           className="transition  w-screen h-screen rotate-180"
+//           className="transition  w-screen h-svh rotate-180"
 //           viewBox="0 0 100 100"
 //           preserveAspectRatio="none"
 //         >
@@ -145,7 +145,7 @@
 //             </div>
 //           </foreignObject> */}
 //         </svg>
-//         <div className="absolute w-full h-screen top-0 left-0 w">
+//         <div className="absolute w-full h-svh top-0 left-0 w">
 //           <div className="menu-overlayer-bar">
 //             <div className="w-full  px-16 py-9  justify-between items-center inline-flex z-50 relative">
 //               <div className="justify-start items-center gap-2.5 flex karma-logo">

@@ -29,7 +29,7 @@ const Header = () => {
       name: "Holidays Letting",
       subItemsOf: "services",
     },
-    { id: 4, path: "/", name: "Blog" },
+    { id: 4, path: "/blog", name: "Blog" },
     { id: 5, path: "/contact", name: "Contact" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -117,9 +117,9 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="menu-overlayer  fixed top-0 left-0 w-full h-screen  bg-transparent z-30 flex flex-col">
+      <div className="menu-overlayer  fixed top-0 left-0 w-full h-svh  bg-transparent z-30 flex flex-col">
         <svg
-          className="transition  w-screen h-screen rotate-180"
+          className="transition  w-screen h-svh rotate-180"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
@@ -135,7 +135,7 @@ const Header = () => {
             <mpath xlinkHref="#path" />
           </animateMotion>
         </svg>
-        <div className="absolute w-full h-screen top-0 left-0 w">
+        <div className="absolute w-full h-svh top-0 left-0 w">
           <div className="menu-overlayer-bar">
             <div className="w-full  md:px-16 px-4 py-5  justify-between items-center inline-flex z-50 relative">
               <div className="justify-start items-center gap-2.5 flex karma-logo">

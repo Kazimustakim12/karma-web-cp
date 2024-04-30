@@ -40,11 +40,10 @@ const HoverExpandImages = () => {
           return (
             <div
               key={item.id}
+              style={{ backgroundImage: `url(${item.image})` }}
               className={` ${
                 index > 2 ? "hidden sm:flex " : ""
-              }   justify-start  items-end p-4 h-full sm:p-8 gap-2.5 flex bg-red-100 bg-cover group bg-center bg-no-repeat flex-1  transition-all md:hover:flex-[7] hover:flex-[100%] duration-700   bg-[url(${
-                item.image
-              })]`}
+              }   justify-start  items-end p-4 h-full sm:p-8 gap-2.5 flex  bg-cover group bg-center bg-no-repeat flex-1  transition-all md:hover:flex-[7] hover:flex-[100%] duration-700]`}
             >
               <a
                 href={item.url}

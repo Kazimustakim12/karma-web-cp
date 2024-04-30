@@ -50,7 +50,7 @@ const Loader = () => {
   }, []);
 
   return (
-    <div className="z-10  w-full h-screen overflow-hidden flex items-center justify-center fixed inset-0 bg-text-black loader-div">
+    <div className="z-10  w-full h-svh overflow-hidden flex items-center justify-center fixed inset-0 bg-text-black loader-div">
       <LogoSvg
         className=" stroke-primary-500  
  drop-banner-shadow logo-changer sm:w-60 w-40 scale-150"

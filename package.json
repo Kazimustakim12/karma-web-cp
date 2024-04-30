@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.10.1",
     "@gsap/react": "^2.1.0",
     "@material-tailwind/react": "^2.1.9",
     "@studio-freight/lenis": "^1.0.42",
     "@studio-freight/react-lenis": "^0.0.46",
+    "date-fns": "^3.6.0",
+    "graphql": "^16.8.1",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

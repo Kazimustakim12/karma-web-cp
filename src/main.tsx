@@ -3,15 +3,16 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import ThemeContext from "./context/ThemeProvider.tsx";
 import { ThemeProvider } from "@material-tailwind/react";
+import { ApolloProvider } from "@apollo/client";
+import client from "./lib/apollo";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <ThemeContext>
+        <ApolloProvider client={client}>
           <App />
-        </ThemeContext>
+        </ApolloProvider>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>

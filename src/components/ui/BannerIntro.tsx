@@ -11,7 +11,7 @@ const BannerIntro = ({
     <>
       <div className="w-full  flex-col justify-center items-center gap-7 inline-flex gs_reveal py-[75px] p-4">
         <div className="max-w-[608px] w-full pb-10 border-b border-primary-500 justify-center items-start gap-2.5 inline-flex">
-          <div className="text-center text-primary-500 sm:text-[25px] text-[20px] font-bold font-['Inter'] uppercase leading-[30.35px] tracking-[5px]">
+          <div className="text-center text-primary-500 md:text-[35px] sm:text-[25px] text-[20px] font-bold font-['Inter'] uppercase leading-[30.35px] tracking-[5px]">
             {introBannerHeadline}
           </div>
         </div>
