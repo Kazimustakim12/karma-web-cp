@@ -1,7 +1,29 @@
 import { Card } from "flowbite-react";
 import PropsTypes from "prop-types";
 import { Link } from "react-router-dom";
-function BlogCard({ blogInfo }) {
+
+type blogInfo = {
+  date: string;
+  title: string;
+  content: string;
+  slug: string;
+  author: {
+    node: {
+      name: string;
+      avatar: {
+        url: string;
+      };
+    };
+  };
+  featuredImage: {
+    node: {
+      altText: string;
+      sourceUrl: string;
+    };
+  };
+};
+
+function BlogCard({ blogInfo }: { blogInfo: blogInfo }) {
   const {
     date,
     title,
@@ -39,25 +61,3 @@ function BlogCard({ blogInfo }) {
   );
 }
 export default BlogCard;
-BlogCard.propTypes = {
-  blogInfo: PropsTypes.shape({
-    date: PropsTypes.string,
-    title: PropsTypes.string,
-    content: PropsTypes.string,
-    slug: PropsTypes.string,
-    featuredImage: PropsTypes.shape({
-      node: PropsTypes.shape({
-        altText: PropsTypes.string,
-        sourceUrl: PropsTypes.string,
-      }),
-    }),
-    author: PropsTypes.shape({
-      node: PropsTypes.shape({
-        name: PropsTypes.string,
-        avatar: PropsTypes.shape({
-          url: PropsTypes.string,
-        }),
-      }),
-    }),
-  }),
-};

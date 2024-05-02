@@ -1,15 +1,46 @@
-import PropsTypes from "prop-types";
 import CategoryLabel from "./CategoryLabel";
 import { format, parseISO } from "date-fns";
 import TagLabel from "./TagLabel";
+import AnimationUtils from "../../utils/animations";
+import { useEffect } from "react";
+type BlogDetail = {
+  post?: {
+    date: string;
+    title: string;
+    content: string;
+    featuredImage: {
+      node: {
+        altText: string;
+        sourceUrl: string;
+      };
+    };
+    author: {
+      node: {
+        name: string;
+        avatar: { url: string };
+      };
+    };
+    categories: {
+      nodes: [];
+    };
+    tags: {
+      nodes: [];
+    };
+  };
 
-const BlogDetails = ({ post, loading }) => {
-  if (loading) {
+  loading?: boolean;
+};
+
+const BlogDetails = ({ post, loading }: BlogDetail) => {
+  useEffect(() => {
+    AnimationUtils.initializeScrollTrigger();
+  }, []);
+  if (loading)
     return (
-      <div className="bg-white py-8 rounded-3xl">
+      <div className="bg-white py-8 rounded-3xl ">
         <div
           role="status"
-          className="max-w-[1030px] mx-auto px-4 sm:px-8 xl:px-0 animate-pulse"
+          className="max-w-[770px]  mx-auto px-4 sm:px-8 xl:px-0 animate-pulse"
         >
           <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
           <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
@@ -51,7 +82,7 @@ const BlogDetails = ({ post, loading }) => {
         </div>
       </div>
     );
-  }
+
   const {
     date,
     title,
@@ -67,17 +98,14 @@ const BlogDetails = ({ post, loading }) => {
   return (
     <>
       {post && (
-        <div className="max-w-[1030px] mx-auto px-4 sm:px-8 xl:px-0">
+        <div className="max-w-[1030px] mx-auto px-0 sm:px-8 xl:px-0">
           <div className="max-w-[770px] mx-auto">
-            <h1 className="font-bold text-2xl sm:text-4xl lg:text-custom-2 text-dark mb-6">
+            <h1 className="gs_reveal font-bold text-2xl sm:text-4xl lg:text-custom-2 text-dark mb-6">
               {title}
             </h1>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 mt-7.5">
-              <div className="flex flex-wrap items-center gap-4">
-                <div
-                  href="author.html"
-                  className="flex w-12 h-12 rounded-full overflow-hidden"
-                >
+              <div className="flex flex-wrap items-center gap-4 gs_reveal">
+                <div className="flex w-12 h-12 rounded-full overflow-hidden">
                   <img src={userUrl} alt="user" loading="lazy" />
                 </div>
                 <div>
@@ -85,10 +113,10 @@ const BlogDetails = ({ post, loading }) => {
                     <span>{userName}</span>
                   </h4>
                   <div className="flex gap-5 align-bottom">
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                       <span>{format(parseISO(date), "MMMM dd,  yyyy")}</span>
                       <span className="flex w-[3px] h-[3px] rounded-full bg-gray-500"></span>
-                      <CategoryLabel categories={post?.categories?.nodes} />
+                      <CategoryLabel categories={post.categories.nodes} />
                       <span className="flex w-[3px] h-[3px] rounded-full bg-gray-500"></span>
                       <TagLabel tags={post?.tags?.nodes} />
                     </div>
@@ -98,7 +126,7 @@ const BlogDetails = ({ post, loading }) => {
             </div>
           </div>
           {featuredImage?.node?.sourceUrl == null ? (
-            <div className="flex w-full  items-center justify-center  bg-gray-300 rounded  dark:bg-gray-700 my-11 h-[420px] object-cover">
+            <div className="gs_reveal flex w-full  items-center justify-center  bg-gray-300 rounded  dark:bg-gray-700 my-11 h-[420px] object-cover">
               <svg
                 className="w-10 h-10 text-gray-200 dark:text-gray-600"
                 aria-hidden="true"
@@ -113,14 +141,14 @@ const BlogDetails = ({ post, loading }) => {
             <img
               src={featuredImage?.node?.sourceUrl}
               alt="blog"
-              className="m-auto w-full rounded-3xl my-11 h-[420px] object-cover"
+              className="gs_reveal m-auto w-full rounded-3xl my-11 h-[420px] object-cover"
               loading="lazy"
             />
           )}
 
           <div className="max-w-[770px] mx-auto">
             <div
-              className="post-content"
+              className="post-content gs_reveal"
               dangerouslySetInnerHTML={{ __html: content }}
             ></div>
           </div>
@@ -131,38 +159,38 @@ const BlogDetails = ({ post, loading }) => {
 };
 
 export default BlogDetails;
-BlogDetails.propTypes = {
-  post: PropsTypes.shape({
-    date: PropsTypes.string.isRequired,
-    title: PropsTypes.string.isRequired,
-    content: PropsTypes.string.isRequired,
-    featuredImage: PropsTypes.shape({
-      node: PropsTypes.shape({
-        sourceUrl: PropsTypes.string.isRequired,
-      }),
-    }),
-    categories: PropsTypes.shape({
-      nodes: PropsTypes.arrayOf(
-        PropsTypes.shape({
-          name: PropsTypes.string.isRequired,
-        })
-      ),
-    }),
-    tags: PropsTypes.shape({
-      nodes: PropsTypes.arrayOf(
-        PropsTypes.shape({
-          name: PropsTypes.string.isRequired,
-        })
-      ),
-    }),
-    author: PropsTypes.shape({
-      node: PropsTypes.shape({
-        name: PropsTypes.string.isRequired,
-        avatar: PropsTypes.shape({
-          url: PropsTypes.string.isRequired,
-        }),
-      }),
-    }),
-  }),
-  loading: PropsTypes.bool,
-};
+
+//   post: PropsTypes.shape({
+//     date: PropsTypes.string.isRequired,
+//     title: PropsTypes.string.isRequired,
+//     content: PropsTypes.string.isRequired,
+//     featuredImage: PropsTypes.shape({
+//       node: PropsTypes.shape({
+//         sourceUrl: PropsTypes.string.isRequired,
+//       }),
+//     }),
+//     categories: PropsTypes.shape({
+//       nodes: PropsTypes.arrayOf(
+//         PropsTypes.shape({
+//           name: PropsTypes.string.isRequired,
+//         })
+//       ),
+//     }),
+//     tags: PropsTypes.shape({
+//       nodes: PropsTypes.arrayOf(
+//         PropsTypes.shape({
+//           name: PropsTypes.string.isRequired,
+//         })
+//       ),
+//     }),
+//     author: PropsTypes.shape({
+//       node: PropsTypes.shape({
+//         name: PropsTypes.string.isRequired,
+//         avatar: PropsTypes.shape({
+//           url: PropsTypes.string.isRequired,
+//         }),
+//       }),
+//     }),
+//   }),
+//   loading: PropsTypes.bool,
+// };

@@ -1,7 +1,45 @@
 import React from "react";
 import Card from "./ui/Card";
+import { id } from "date-fns/locale";
 
 const PropertyList = () => {
+  const PropertyListArray = [
+    {
+      id: 1,
+      title: "Luxury Penthouse with Pool and Seaview in Ta Xbiex, Malta",
+      location: "GOZO - MALTA",
+      info: "Escape to the unparalleled beauty of Malta with our exclusive 3-bedroom, 2-bathroom Penthouse in the charming area of Ta' Xbiex. Indulge in a mesmerizing panorama of the sea, embracing the majestic silhouette of Valletta, right from your windows.",
+      bgImg: "/assets/images/house-images/house-taxbix.webp",
+    },
+    {
+      id: 2,
+      title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
+      location: "GOZO - MALTA",
+      info: "This revamp wasn't just about paint and pillows; its about  injecting personality, excitement, and a touch of magic into the property, all thanks to the power of our art-inspired design approach.",
+      bgImg: "/assets/images/house-images/house-12.png",
+    },
+    {
+      id: 3,
+      title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
+      location: "GOZO - MALTA",
+      info: "This revamp wasn't just about paint and pillows; its about  injecting personality, excitement, and a touch of magic into the property, all thanks to the power of our art-inspired design approach.",
+      bgImg: "/assets/images/house-images/house-13.png",
+    },
+    {
+      id: 4,
+      title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
+      location: "GOZO - MALTA",
+      info: "This revamp wasn't just about paint and pillows; its about  injecting personality, excitement, and a touch of magic into the property, all thanks to the power of our art-inspired design approach.",
+      bgImg: "/assets/images/house-images/house-14.png",
+    },
+    {
+      id: 4,
+      title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
+      location: "GOZO - MALTA",
+      info: "This revamp wasn't just about paint and pillows; its about  injecting personality, excitement, and a touch of magic into the property, all thanks to the power of our art-inspired design approach.",
+      bgImg: "/assets/images/house-images/house-15.png",
+    },
+  ];
   return (
     <section
       id="section_to-pin"
@@ -21,68 +59,17 @@ const PropertyList = () => {
             Recent New Property
           </h1>
         </div>
-        {/* <div id="image_wrapper_1" className="image_wrapper image_wrapper_1">
-          <img
-            className="image"
-            src="https://images.unsplash.com/photo-1516647768-31ff0cef8821?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80"
-            alt="Lil' Image"
-          />
-        </div>
-        <div id="image_wrapper_2" className="image_wrapper image_wrapper_2">
-          <img
-            className="image"
-            src="https://images.unsplash.com/photo-1516648064-ee10acfa64db?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=863&amp;q=80"
-            alt="Lil' Image"
-          />
-        </div>
-        <div id="image_wrapper_3" className="image_wrapper image_wrapper_3">
-          <img
-            className="image"
-            src="https://images.unsplash.com/photo-1516647072-a39e59e34b97?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80"
-            alt="Lil' Image"
-          />
-        </div> */}
+
         <div id="cards_wrapper" className="propertyCard_wrapper flex gap-4">
-          <Card
-            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
-            location="GOZO - MALTA"
-            info="This revamp wasn’t just about paint and pillows; it’s about
-                injecting personality, excitement, and a touch of magic into the
-                property, all thanks to the power of our art-inspired design
-                approach."
-          />
-          <Card
-            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
-            location="GOZO - MALTA"
-            info="This revamp wasn’t just about paint and pillows; it’s about
-                injecting personality, excitement, and a touch of magic into the
-                property, all thanks to the power of our art-inspired design
-                approach."
-          />
-          <Card
-            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
-            location="GOZO - MALTA"
-            info="This revamp wasn’t just about paint and pillows; it’s about
-                injecting personality, excitement, and a touch of magic into the
-                property, all thanks to the power of our art-inspired design
-                approach."
-          />
-          <Card
-            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
-            location="GOZO - MALTA"
-            info="This revamp wasn’t just about paint and pillows; it’s about
-                injecting personality, excitement, and a touch of magic into the
-                property, all thanks to the power of our art-inspired design
-                approach."
-          />
-          <Card
-            title="FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP"
-            location="GOZO - MALTA"
-            info="This revamp wasn’t just about paint and pillows; it’s about
-                injecting personality, excitement, and a touch of magic into the
-                property, all thanks to the power of our art-inspired design
-                approach."
-          />
+          {PropertyListArray.map((property) => (
+            <Card
+              key={property.id}
+              title={property.title}
+              location={property.location}
+              info={property.info}
+              bgImg={property.bgImg}
+            />
+          ))}
         </div>
       </div>
     </section>

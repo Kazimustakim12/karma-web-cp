@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import InfiniteMenu from "../../utils/InfiniteScroll";
-import { TbXboxA } from "react-icons/tb";
+
 interface navPath {
   id: number;
   path: string;
@@ -76,11 +75,11 @@ const Header = () => {
     window.scrollTo(0, 0);
     if (isMenuOpen) {
       console.log("iam play ");
-      menuOpentl.current.play();
+      menuOpentl?.current?.play();
       htmlTag?.classList.add("overflow-hidden");
     } else {
       console.log("iam reverse ");
-      menuOpentl.current.reverse();
+      menuOpentl?.current?.reverse();
       htmlTag?.classList.remove("overflow-hidden");
     }
   }, [isMenuOpen]);

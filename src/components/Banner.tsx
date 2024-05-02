@@ -237,13 +237,13 @@ const Banner = () => {
         >
           <h4
             data-cursor-text="karma"
-            className="opacity-0 para translate-y-[130px]  lg:text-xl font-blinker font-bold text-primary-500 text-center xl:text-2xl
+            className="opacity-0 para translate-y-[130px] xl:text-2xl lg:text-xl font-blinker font-bold text-primary-500 text-center 
             uppercase
             leading-[30.35px]
             tracking-[5px]"
             data-cursor="-color-accent-lilac"
           >
-            Experience exceptional peace of mind with KARMA today!
+            Experience exceptional peace of mind with <br /> KARMA today!
           </h4>
         </div>
       </div>

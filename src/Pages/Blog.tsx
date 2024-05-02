@@ -23,6 +23,10 @@ const Blog = () => {
   if (!data && loading) {
     return (
       <div className="container">
+        <BannerIntro
+          introBannerHeadline="Blogs"
+          introBannerSubHeadline="Check The Latest Blogs"
+        />
         <>
           <div
             role="status"

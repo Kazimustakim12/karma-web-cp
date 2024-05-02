@@ -48,7 +48,22 @@ const data = [
   },
 ];
 
-export function CustomTabs({ tabListArray = data, activeTabName }) {
+type CustomTab = {
+  label: string;
+  value: string;
+  imgSrc: string;
+  desc: string;
+};
+
+type CustomTabsProps = {
+  tabListArray?: CustomTab[];
+  activeTabName: string;
+};
+
+export function CustomTabs({
+  tabListArray = data,
+  activeTabName,
+}: CustomTabsProps) {
   const [activeTab, setActiveTab] = useState(activeTabName);
   const tabRef = useRef(null);
   console.log(tabRef.current, "tab ref");

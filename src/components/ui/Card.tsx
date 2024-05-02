@@ -4,15 +4,24 @@ const Card = ({
   title,
   info,
   location,
+  bgImg,
 }: {
   title: string;
   info: string;
   location: string;
+  bgImg: string;
 }) => {
   return (
     <>
-      <a href="" className="group cursor-pointer ">
-        <div className="xl:min-w-[798px] md:w-[580px] w-[420px] h-[380px]  xl:h-[526px] lg:h-[480px] min-h-full md:px-7 md:py-6 px-3 py-3 flex-col justify-end items-start gap-2.5 inline-flex bg-[url('/assets/images/house-images/house-11.png')] bg-no-repeat bg-cover bg-center">
+      <a
+        href="https://holidaysinmalta.eu/"
+        target="_blank"
+        className="group cursor-pointer "
+      >
+        <div
+          style={{ backgroundImage: `url(${bgImg})` }}
+          className="xl:min-w-[798px] md:w-[580px] w-[420px] h-[380px]  xl:h-[526px] lg:h-[480px] min-h-full md:px-7 md:py-6 px-3 py-3 flex-col justify-end items-start gap-2.5 inline-flex bg-no-repeat bg-cover bg-center"
+        >
           <div className="justify-start items-center gap-2.5 inline-flex">
             <div className="flex-col justify-start items-start gap-[5px] inline-flex">
               <div className="p-2.5 bg-white justify-center items-center gap-2.5 inline-flex">

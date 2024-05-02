@@ -8,7 +8,7 @@ import { ImagePlaceHolder } from "../ui/ImagePlaceHolder";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import AnimationUtils from "../../utils/animations";
+
 import { useEffect } from "react";
 
 export default function PostList({ post }) {
