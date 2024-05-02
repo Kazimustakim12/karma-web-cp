@@ -46,12 +46,11 @@ interface PostEdge {
   node: Post;
 }
 const Blog = () => {
-  const BATCH_SIZE = 5;
+  const BATCH_SIZE = 10;
   const { data, loading, error, fetchMore } = useQuery(GET_POST_BY_PAGINATION, {
     variables: { first: BATCH_SIZE, after: null },
     notifyOnNetworkStatusChange: true,
   });
-
   if (error) {
     return <p>Sorry, an error has occurred. Please reload the page.</p>;
   }
@@ -180,7 +179,7 @@ const Blog = () => {
                   <PostList key={post.id} post={post} />
                 ))}
               </div>
-              <div className="w-full flex justify-center mt-8 mb-3">
+              <div className="w-full flex justify-center mt-8 mb-3 gs_reveal">
                 {haveMorePosts ? (
                   <Button
                     ripple={true}
@@ -191,10 +190,8 @@ const Blog = () => {
                         variables: { after: data.posts.pageInfo.endCursor },
                       });
                     }}
-                    className="text-center hover:border focus:ring-primary-500 text-xl hover:border-primary-600 border text-white px-4 py-2 rounded-full bg-primary-600 w-auto font-semibold  hover:bg-primary-500 md:mt-0 sm:mt-2 hover:text-primary-600 enabled:hover:bg-white"
+                    className="text-center hover:border focus:ring-primary-500 text-xl hover:border-primary-500 border text-white px-4 py-2 rounded-full bg-primary-600 w-auto font-semibold  hover:bg-primary-500 md:mt-0 sm:mt-2 hover:text-text-black enabled:hover:bg-primary-500"
                     placeholder={undefined}
-                    onPointerEnterCapture={undefined}
-                    onPointerLeaveCapture={undefined}
                   >
                     {loading ? "Loading..." : "Load more"}
                   </Button>

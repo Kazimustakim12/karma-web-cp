@@ -118,8 +118,8 @@ export default function PostList({ post }: postProps) {
                 </Link>
                 <span className="flex w-[3px] h-[3px] rounded-full bg-gray-500"></span>
                 {/* <time className=" text-sm" dateTime={post?.date}>
-              {format(parseISO(post?.date), "MMMM dd,  yyyy")}
-            </time> */}
+          {format(parseISO(post?.date), "MMMM dd,  yyyy")}
+        </time> */}
                 {post?.date && (
                   <time className=" text-sm" dateTime={post?.date}>
                     {format(parseISO(post?.date), "MMMM dd,  yyyy")}

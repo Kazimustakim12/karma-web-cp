@@ -90,6 +90,7 @@
   display: none;
 }
 html.lenis {
+  scrollbar-width: none;
   height: auto;
 }
 

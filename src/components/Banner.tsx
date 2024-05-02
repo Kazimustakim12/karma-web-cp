@@ -180,7 +180,7 @@ const Banner = () => {
     <>
       <div
         id="ImgWrapper"
-        className="imgWrapper relative   h-svh overflow-hidden bg-transparent  flex items-center justify-center initial_img"
+        className="imgWrapper relative h-svh overflow-hidden bg-transparent  flex items-center justify-center initial_img"
         ref={BannerSection}
       >
         <div className="absolute text-center flex flex-col justify-center items-center  z-10 overflow-visible w-full h-svh img-wrraper-div">

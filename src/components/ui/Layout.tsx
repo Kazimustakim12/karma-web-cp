@@ -24,8 +24,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     headerRevel();
   });
   return (
-    <div className="bg-text-black relative bg-[url('/assets/images/bg-cloud.webp')] h-full bg-center bg-cover bg-blend-luminosity bg-fixed animate-layout">
-      <div className=" bg-text-black bg-opacity-70">
+    <div className="bg-text-black relative bg-[url('/assets/images/bg-cloud.webp')]   min-h-svh bg-center bg-cover  bg-no-repeat bg-blend-luminosity bg-fixed animate-layout">
+      <div className=" bg-text-black bg-opacity-70 min-h-svh ">
         <Header />
         {children}
         <Footer />
