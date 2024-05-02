@@ -25,7 +25,7 @@ const PropertyManagement = () => {
           </>
         }
       />
-      <FullWidthImage imgUrl="/assets/images/property-management.jpg" />
+      <FullWidthImage imgUrl="/assets/images/property-management.webp" />
       <section className="bg-primary-500 py-[50px] ">
         <div className=" max-w-[1024px] w-full m-auto p-3 ">
           <p className="text-text-black text-[15px] font-normal font-['Inter'] leading-[25px]">

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import SmoothScrolling from "../components/ui/SmoothScroll";
 import BannerIntro from "../components/ui/BannerIntro";
 import FullWidthImage from "../components/ui/FullWidthImage";
@@ -30,7 +30,7 @@ const Contact = () => {
           </>
         }
       />
-      <FullWidthImage imgUrl="/assets/images/contact.png" />
+      <FullWidthImage imgUrl="/assets/images/contact.webp" />
     </SmoothScrolling>
   );
 };

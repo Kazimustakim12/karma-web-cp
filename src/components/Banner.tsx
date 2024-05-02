@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Flip } from "gsap/Flip";
@@ -7,12 +8,11 @@ import SplitType from "split-type";
 gsap.registerPlugin(Flip);
 const Banner = () => {
   const BannerSection = useRef(null);
-  const revelbannerImg = useRef();
-  const htmlTag = document.querySelector("html.lenis");
 
   useEffect(() => {}, []);
 
   useGSAP(() => {
+    const htmlTag = document.querySelector("html.lenis");
     htmlTag?.classList.add("overflow-hidden");
 
     const pinBannerAndMOveImages = () => {
@@ -61,27 +61,29 @@ const Banner = () => {
     };
 
     const pinnListHorizontalCard = () => {
-      const HorizontalSectionPin = document.querySelector("#section_pin");
-
-      const containerAnimation = gsap.to(HorizontalSectionPin, {
-        scrollTrigger: {
-          trigger: "#section_to-pin",
-          start: "top top",
-          end: () => "+=" + HorizontalSectionPin?.offsetWidth,
-          pin: true,
-          scrub: true,
-        },
-        x: () =>
-          -(
-            HorizontalSectionPin.scrollWidth -
-            document.documentElement.clientWidth
-          ) + "px",
-        ease: "none",
-      });
+      const HorizontalSectionPin: HTMLElement | null =
+        document.querySelector("#section_pin");
+      if (HorizontalSectionPin) {
+        gsap.to(HorizontalSectionPin, {
+          scrollTrigger: {
+            trigger: "#section_to-pin",
+            start: "top top",
+            end: () => "+=" + HorizontalSectionPin?.offsetWidth,
+            pin: true,
+            scrub: true,
+          },
+          x: () =>
+            -(
+              HorizontalSectionPin.scrollWidth -
+              document.documentElement.clientWidth
+            ) + "px",
+          ease: "none",
+        });
+      }
     };
 
     const initial_img = document.querySelector(".imgWrapper");
-    const myText = new SplitType(".head-text");
+    new SplitType(".head-text");
     const headerRevel = () => {
       return gsap.to(".menu-bar", {
         duration: 1,
@@ -91,7 +93,6 @@ const Banner = () => {
     };
     const moveImgToCenter = () => {
       const state = Flip.getState(".imgWrapper .img-revel-wrapper");
-      console.log(state, "state", initial_img, "initial");
       initial_img?.classList.remove("initial_img");
       initial_img?.classList.add("img_center");
       return Flip.from(state, {
@@ -106,7 +107,6 @@ const Banner = () => {
     };
     const moveImgToOrgin = () => {
       const state = Flip.getState(".imgWrapper .img-revel-wrapper");
-      console.log(state, "state", initial_img, "initial");
       initial_img?.classList.remove("img_center");
       initial_img?.classList.add("origin_img");
       return Flip.from(state, {
@@ -187,37 +187,37 @@ const Banner = () => {
           <div className="img-revel-wrapper z-[3]" id="img1">
             <img
               className="object-cover w-56 h-[20rem] "
-              src="/assets/images/house-images/house-11.png"
+              src="/assets/images/house-images/house-11.webp"
             />
           </div>
           <div className="img-revel-wrapper z-[2]" id="img2">
             <img
               className="object-cover w-56 h-[20rem] "
-              src="/assets/images/house-images/house-12.png"
+              src="/assets/images/house-images/house-12.webp"
             />
           </div>
           <div className="img-revel-wrapper z-[1]" id="img3">
             <img
               className="object-cover w-[34rem] h-[20rem]"
-              src="/assets/images/house-images/house-13.png"
+              src="/assets/images/house-images/house-13.webp"
             />
           </div>
           <div className="img-revel-wrapper z-[0]" id="img4">
             <img
               className="object-cover w-[22rem] h-[15rem] "
-              src="/assets/images/house-images/house-14.png"
+              src="/assets/images/house-images/house-14.webp"
             />
           </div>
           <div className="img-revel-wrapper z-[-1]" id="img5">
             <img
               className="object-cover w-[34rem] h-[20rem]"
-              src="/assets/images/house-images/house-15.png"
+              src="/assets/images/house-images/house-15.webp"
             />
           </div>
           <div className="img-revel-wrapper z-[-1]" id="img6">
             <img
               className="object-cover w-96 h-64 "
-              src="/assets/images/house-images/house-16.png"
+              src="/assets/images/house-images/house-16.webp"
             />
           </div>
           <div className="flex flex-col items-center justify-center center-para z-10">

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import SmoothScrolling from "../components/ui/SmoothScroll";
 import BannerIntro from "../components/ui/BannerIntro";
 import FullWidthImage from "../components/ui/FullWidthImage";
@@ -18,7 +18,7 @@ const Holiday = () => {
           </>
         }
       />
-      <FullWidthImage imgUrl="/assets/images/holiday-rent.png" />
+      <FullWidthImage imgUrl="/assets/images/holiday-rent.webp" />
       <section className="bg-primary-500 py-[50px] ">
         <div className=" max-w-[1024px] w-full m-auto p-4">
           <h1 className=" text-text-black lg:text-[37px] lg:leading-[48px] md:text-[25px] md:leading-[32px] text-xl font-normal font-['Inter']  mb-[50px]">
@@ -27,7 +27,7 @@ const Holiday = () => {
           </h1>
           <img
             className="m-auto py-[50px] gs_reveal"
-            src="/assets/images/booking-platforms.png"
+            src="/assets/images/booking-platforms.webp"
             alt=""
           />
           <div>

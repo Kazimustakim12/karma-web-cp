@@ -13,7 +13,7 @@ const ApprochTab = () => {
     {
       label: "OUR APPROACH",
       value: "ourApproach",
-      imgSrc: "/assets/images/tab-approach.png",
+      imgSrc: "/assets/images/tab-approach.webp",
       desc: `With extensive financial expertise, 14 years of real estate experience, and strong IT knowledge, we offer exceptional value that sets us apart. Our comprehensive services include financial forecasting, revenue analysis, and insightful guidance. But we don't stop there. We also provide turnkey services to ensure your properties are always in optimal condition. From maintenance to improvements, we handle every aspect with care. Our goal is to exceed your expectations, covering Malta, Gozo, and Sicily. Entrust Casa Rooms for unparalleled service and superior results today!.`,
     },
     {

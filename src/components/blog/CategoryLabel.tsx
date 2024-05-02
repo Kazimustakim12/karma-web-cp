@@ -1,17 +1,14 @@
 import { cx } from "../../utils/all";
 
-type categories = {
+interface Category {
   name: string;
-  slug: string;
-};
-
-export default function CategoryLabel({
+}
+const CategoryLabel: React.FC<{ categories?: Category[] }> = ({
   categories,
-  className,
-}: {
-  categories: Array<categories>;
-  className?: string;
-}) {
+}) => {
+  if (!categories || categories.length === 0) {
+    return null;
+  }
   return (
     <div className="flex gap-3">
       {categories &&
@@ -19,8 +16,7 @@ export default function CategoryLabel({
           <label
             key={index}
             className={cx(
-              "inline-block text-sm  tracking-wider uppercase  text-text-black font-semibold bg-primary-500 py-[4px] px-[8px] rounded-md",
-              className
+              "inline-block text-sm  tracking-wider uppercase  text-text-black font-semibold bg-primary-500 py-[4px] px-[8px] rounded-md"
             )}
           >
             {category.name}
@@ -28,4 +24,6 @@ export default function CategoryLabel({
         ))}
     </div>
   );
-}
+};
+
+export default CategoryLabel;

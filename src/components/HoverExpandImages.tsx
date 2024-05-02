@@ -4,31 +4,31 @@ const HoverExpandImages = () => {
   const PropertyListArray = [
     {
       id: "1",
-      image: "/assets/images/house-images/house-11.png",
+      image: "/assets/images/house-images/house-11.webp",
       title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
       url: "",
     },
     {
       id: "2",
-      image: "/assets/images/house-images/house-12.png",
+      image: "/assets/images/house-images/house-12.webp",
       title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
       url: "",
     },
     {
       id: "3",
-      image: "/assets/images/house-images/house-13.png",
+      image: "/assets/images/house-images/house-13.webp",
       title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
       url: "",
     },
     {
       id: "4",
-      image: "/assets/images/house-images/house-14.png",
+      image: "/assets/images/house-images/house-14.webp",
       title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
       url: "",
     },
     {
       id: "5",
-      image: "/assets/images/house-images/house-15.png",
+      image: "/assets/images/house-images/house-15.webp",
       title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
       url: "",
     },

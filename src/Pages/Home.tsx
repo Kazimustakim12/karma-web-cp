@@ -16,7 +16,7 @@ const Home = () => {
     }, 4000);
     AnimationUtils.initializeScrollTrigger();
   }, []); // Empty dependency array ensures the effect runs only once, similar to componentDidMount
-  console.log("================================", isLoading);
+
   return (
     <SmoothScrolling>
       <>
@@ -24,6 +24,7 @@ const Home = () => {
           <Loader />
         ) : (
           <>
+            {/* <Loader /> */}
             <Banner />
             <PropertyList />
             <ApprochTab />

@@ -1,17 +1,8 @@
 import { cx } from "../../utils/all";
-
-type Tags = {
+interface Tag {
   name: string;
-  slug: string;
-};
-
-export default function TagLabel({
-  tags,
-  className,
-}: {
-  tags: Array<Tags>;
-  className?: string;
-}) {
+}
+const TagLabel: React.FC<{ tags: Tag[] }> = ({ tags }) => {
   return (
     <div className="flex gap-2">
       {tags &&
@@ -19,8 +10,7 @@ export default function TagLabel({
           <label
             key={index}
             className={cx(
-              "inline-block text-xs  tracking-wider uppercase  text-gray-400 font-semibold ",
-              className
+              "inline-block text-xs  tracking-wider uppercase  text-gray-400 font-semibold "
             )}
           >
             #{tag.name}
@@ -28,4 +18,6 @@ export default function TagLabel({
         ))}
     </div>
   );
-}
+};
+
+export default TagLabel;

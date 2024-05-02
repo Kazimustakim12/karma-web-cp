@@ -1,8 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import BlogDetails from "../components/blog/BlogDetails";
 import { useQuery } from "@apollo/client";
-import { GET_POST_BY_ID } from "../lib/querys";
 import { Breadcrumbs } from "@material-tailwind/react";
+import { GET_POST_BY_ID } from "../lib/querys";
 const BlogDetailPage = () => {
   const { slug } = useParams();
   const { loading, error, data } = useQuery(GET_POST_BY_ID, {

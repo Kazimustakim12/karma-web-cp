@@ -1,4 +1,3 @@
-import React from "react";
 import { LogoSvg } from "./IconsSVg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -30,7 +29,7 @@ const Loader = () => {
                 opacity: 0,
                 width: "160px",
                 display: "none",
-                rotate: 180,
+                // rotate: 180,
                 duration: 1,
                 ease: "easeInOut",
               })
@@ -41,7 +40,6 @@ const Loader = () => {
                 delay: 0.2,
                 duration: 1,
                 ease: "easeInOut",
-
                 onComplete: () => {},
               });
           },

@@ -9,9 +9,44 @@ import PostList from "../components/blog/PostList.js";
 import BannerIntro from "../components/ui/BannerIntro.js";
 import Loading from "../components/ui/Loading.js";
 import SmoothScrolling from "../components/ui/SmoothScroll.js";
+interface Post {
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+  content: string;
+  featuredImage: {
+    node: {
+      altText: string;
 
+      sourceUrl: string;
+    };
+  };
+  author: {
+    node: {
+      name: string;
+      avatar: {
+        url: string;
+      };
+    };
+  };
+  categories: {
+    nodes: {
+      name: string;
+    }[];
+  };
+  tags: {
+    nodes: {
+      name: string;
+    }[];
+  };
+}
+
+interface PostEdge {
+  node: Post;
+}
 const Blog = () => {
-  const BATCH_SIZE = 20;
+  const BATCH_SIZE = 5;
   const { data, loading, error, fetchMore } = useQuery(GET_POST_BY_PAGINATION, {
     variables: { first: BATCH_SIZE, after: null },
     notifyOnNetworkStatusChange: true,
@@ -61,7 +96,7 @@ const Blog = () => {
   if (!data?.posts.edges.length) {
     return <p>No posts have been published.</p>;
   }
-  const posts = data.posts.edges.map((edge) => edge.node);
+  const posts = data.posts.edges.map((edge: PostEdge) => edge.node);
   const haveMorePosts = Boolean(data?.posts?.pageInfo?.hasNextPage);
 
   return (
@@ -74,7 +109,7 @@ const Blog = () => {
         <div className="flex flex-col gap-7">
           {posts.length > 0 ? (
             <>
-              {posts.slice(0, 1).map((post, index) => (
+              {posts.slice(0, 1).map((post: Post, index: number) => (
                 <div
                   key={index + post.id}
                   className="w-full flex gap-5 md:flex-nowrap flex-wrap  bg-white  justify-center px-5 py-5 rounded-3xl gs_reveal"
@@ -141,13 +176,8 @@ const Blog = () => {
                 </div>
               ))}
               <div className="grid gap-7 lg:grid-cols-3 md:grid-cols-2 lg:gap-7 xl:grid-cols-3 ">
-                {posts.slice(1).map((post) => (
-                  <PostList
-                    key={post.id}
-                    post={post}
-                    aspect="landscape"
-                    preloadImage={true}
-                  />
+                {posts.slice(1).map((post: Post) => (
+                  <PostList key={post.id} post={post} />
                 ))}
               </div>
               <div className="w-full flex justify-center mt-8 mb-3">
@@ -162,6 +192,9 @@ const Blog = () => {
                       });
                     }}
                     className="text-center hover:border focus:ring-primary-500 text-xl hover:border-primary-600 border text-white px-4 py-2 rounded-full bg-primary-600 w-auto font-semibold  hover:bg-primary-500 md:mt-0 sm:mt-2 hover:text-primary-600 enabled:hover:bg-white"
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
                     {loading ? "Loading..." : "Load more"}
                   </Button>

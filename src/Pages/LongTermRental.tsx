@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import SmoothScrolling from "../components/ui/SmoothScroll";
 import BannerIntro from "../components/ui/BannerIntro";
 import FullWidthImage from "../components/ui/FullWidthImage";
@@ -18,7 +18,7 @@ const LongTermRental = () => {
           </>
         }
       />
-      <FullWidthImage imgUrl="/assets/images/long-rental.png" />
+      <FullWidthImage imgUrl="/assets/images/long-rental.webp" />
       <section className="bg-primary-500 py-[50px] ">
         <div className=" max-w-[1024px] w-full m-auto p-4">
           <h1 className=" text-text-black lg:text-[37px] lg:leading-[48px] md:text-[25px] md:leading-[32px] text-xl font-normal font-['Inter']  mb-[50px]">

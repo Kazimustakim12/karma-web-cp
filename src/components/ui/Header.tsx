@@ -35,7 +35,7 @@ const Header = () => {
   const container = useRef(null);
   const svgStart = "M 0 100 V 50 Q 50 0 100 50 V 100 z";
   const svgEnd = "M 0 100 V 0 Q 50 0 100 0 V 100 z";
-  const menuOpentl = useRef();
+  const menuOpentl = useRef<gsap.core.Timeline>();
   const htmlTag = document.querySelector("html.lenis");
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -45,6 +45,7 @@ const Header = () => {
     () => {
       // const menu = new InfiniteMenu(document.querySelector(".menu-copy"))  ;
       gsap.set(".menu-link-item-holder", { y: 100 });
+
       menuOpentl.current = gsap
         .timeline({ paused: true })
         .to(".menu-overlayer", {
@@ -74,11 +75,9 @@ const Header = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     if (isMenuOpen) {
-      console.log("iam play ");
       menuOpentl?.current?.play();
       htmlTag?.classList.add("overflow-hidden");
     } else {
-      console.log("iam reverse ");
       menuOpentl?.current?.reverse();
       htmlTag?.classList.remove("overflow-hidden");
     }

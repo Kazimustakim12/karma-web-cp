@@ -1,4 +1,3 @@
-// eslint-disable-next-line react/no-array-index-key
 import { cx } from "../../utils/all";
 
 export default function Loading({ numberOfCardsPrelaoder = 6 }) {
@@ -9,18 +8,20 @@ export default function Loading({ numberOfCardsPrelaoder = 6 }) {
         numberOfCardsPrelaoder ? "xl:grid-cols-3" : "xl:grid-cols-3"
       )}
     >
-      {new Array(numberOfCardsPrelaoder).fill().map((item, index) => (
-        <div key={index}>
-          <div
-            role="status"
-            className="group cursor-pointer bg-white p-5 rounded-3xl"
-          >
-            <div className="animate-pulse overflow-hidden rounded-md">
-              <SkeletonImg />
+      {new Array(numberOfCardsPrelaoder)
+        .fill(numberOfCardsPrelaoder)
+        .map((index) => (
+          <div key={index}>
+            <div
+              role="status"
+              className="group cursor-pointer bg-white p-5 rounded-3xl"
+            >
+              <div className="animate-pulse overflow-hidden rounded-md">
+                <SkeletonImg />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }

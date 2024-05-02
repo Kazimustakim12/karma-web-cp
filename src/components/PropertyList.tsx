@@ -1,6 +1,4 @@
-import React from "react";
 import Card from "./ui/Card";
-import { id } from "date-fns/locale";
 
 const PropertyList = () => {
   const PropertyListArray = [
@@ -16,28 +14,28 @@ const PropertyList = () => {
       title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
       location: "GOZO - MALTA",
       info: "This revamp wasn't just about paint and pillows; its about  injecting personality, excitement, and a touch of magic into the property, all thanks to the power of our art-inspired design approach.",
-      bgImg: "/assets/images/house-images/house-12.png",
+      bgImg: "/assets/images/house-images/house-12.webp",
     },
     {
       id: 3,
       title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
       location: "GOZO - MALTA",
       info: "This revamp wasn't just about paint and pillows; its about  injecting personality, excitement, and a touch of magic into the property, all thanks to the power of our art-inspired design approach.",
-      bgImg: "/assets/images/house-images/house-13.png",
+      bgImg: "/assets/images/house-images/house-13.webp",
     },
     {
       id: 4,
       title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
       location: "GOZO - MALTA",
       info: "This revamp wasn't just about paint and pillows; its about  injecting personality, excitement, and a touch of magic into the property, all thanks to the power of our art-inspired design approach.",
-      bgImg: "/assets/images/house-images/house-14.png",
+      bgImg: "/assets/images/house-images/house-14.webp",
     },
     {
-      id: 4,
+      id: 5,
       title: "FROM BLAND TO BRILLIANCE: ART-INSPIRED RENTAL REVAMP",
       location: "GOZO - MALTA",
       info: "This revamp wasn't just about paint and pillows; its about  injecting personality, excitement, and a touch of magic into the property, all thanks to the power of our art-inspired design approach.",
-      bgImg: "/assets/images/house-images/house-15.png",
+      bgImg: "/assets/images/house-images/house-15.webp",
     },
   ];
   return (

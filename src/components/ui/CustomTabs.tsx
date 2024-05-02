@@ -1,9 +1,9 @@
 import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
   Tab,
   TabPanel,
+  Tabs,
+  TabsBody,
+  TabsHeader,
 } from "@material-tailwind/react";
 import { useRef, useState } from "react";
 
@@ -66,7 +66,6 @@ export function CustomTabs({
 }: CustomTabsProps) {
   const [activeTab, setActiveTab] = useState(activeTabName);
   const tabRef = useRef(null);
-  console.log(tabRef.current, "tab ref");
   return (
     <Tabs value={activeTab} ref={tabRef}>
       <TabsHeader
@@ -86,7 +85,6 @@ export function CustomTabs({
                 ? "text-primary-500 border  border-black rounded-full text-sm font-bold font-['Inter'] uppercase tracking-[2.83px] h-auto"
                 : "text-black   border  border-black rounded-full text-sm font-bold font-['Inter'] uppercase tracking-[2.83px] h-auto"
             }
-            // className={`text-black   border  border-black rounded-full text-sm font-bold font-['Inter'] uppercase tracking-[2.83px] `}
           >
             {label}
           </Tab>
