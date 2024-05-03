@@ -27,7 +27,7 @@
 
 @layer base {
   * {
-    @apply box-border list-none p-0 m-0 scroll-smooth;
+    @apply box-border list-none p-0 m-0 scroll-smooth cursor-none;
   }
 
   body {
@@ -39,9 +39,9 @@
 }
 
 @layer components {
-  /* .v-cursor {
+  .v-cursor {
     @apply z-[9999] fixed left-0 top-0 h-3 w-3 rounded-full pointer-events-none opacity-0 transition-opacity    delay-500 translate-x-[-50%] translate-y-[-50%];
-  } */
+  }
 
   .img-wrraper-div {
     perspective: 500px;

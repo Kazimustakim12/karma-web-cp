@@ -141,7 +141,7 @@ const BlogDetails = ({ post, loading }: BlogDetail) => {
             ) : (
               <img
                 src={featuredImage?.node?.sourceUrl}
-                alt="blog"
+                alt="blog-feature-image"
                 className="gs_reveal m-auto w-full rounded-3xl my-11 h-[420px] object-cover"
                 loading="lazy"
               />

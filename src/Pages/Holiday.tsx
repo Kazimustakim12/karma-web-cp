@@ -26,9 +26,10 @@ const Holiday = () => {
             extraordinary guest experiences?
           </h1>
           <img
+            loading="lazy"
+            alt="booking-platforms"
             className="m-auto py-[50px] gs_reveal"
             src="/assets/images/booking-platforms.webp"
-            alt=""
           />
           <div>
             <p className="text-text-black text-[15px] font-normal font-['Inter'] leading-[25px]">

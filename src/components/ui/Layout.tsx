@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Header from "./Header";
+import CustomCursor from "../../utils/customcursor";
 // import Menu from "./Menu";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {}, []);
@@ -24,13 +25,16 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     headerRevel();
   });
   return (
-    <div className="bg-text-black relative bg-[url('/assets/images/bg-cloud.webp')]   min-h-svh bg-center bg-cover  bg-no-repeat bg-blend-luminosity bg-fixed animate-layout">
-      <div className=" bg-text-black bg-opacity-70 min-h-svh ">
-        <Header />
-        {children}
-        <Footer />
-      </div>
-    </div>
+    <>
+      <CustomCursor cursor=".v-cursor" dot=".v-dot">
+        <div className="bg-text-black  bg-[url('/assets/images/bg-cloud.webp')] w-full  z-[-1] h-screen bg-center bg-cover  bg-no-repeat bg-blend-luminosity fixed animate-layout"></div>
+        <div className=" bg-text-black bg-opacity-70 h-full relative top-0 w-full z-[1]">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+      </CustomCursor>
+    </>
   );
 };
 

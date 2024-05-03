@@ -169,7 +169,7 @@ const Header = () => {
             {navPath.map((item) => {
               return (
                 <li
-                  className="menu-link-item w-max overflow-hidden clip"
+                  className="menu-link-item w-max overflow-hidden clip c-link"
                   key={item.id}
                 >
                   <div
@@ -182,7 +182,7 @@ const Header = () => {
                     <Link
                       to={item.path}
                       key={item.id}
-                      className="p-0 menu-link text-primary-500  font-bold font-['Inter'] uppercase tracking-widest  group-hover:text-white transition  lg:text-[7vh] sm:text-[5vh] text-[3vh]   relative  block "
+                      className="p-0 menu-link text-primary-500  font-bold font-['Inter'] uppercase tracking-widest  group-hover:text-white  lg:text-[7vh] sm:text-[5vh] text-[3vh]   relative  block "
                     >
                       {item.name}
                     </Link>

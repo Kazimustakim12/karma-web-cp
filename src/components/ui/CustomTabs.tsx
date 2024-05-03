@@ -95,8 +95,10 @@ export function CustomTabs({
         {tabListArray.map(({ value, desc, imgSrc }) => (
           <TabPanel key={value} value={value} className="text-center">
             <img
-              className="max-w-[686px] object-cover test w-full min-h-[312px] mb-10"
+              loading="lazy"
+              className="max-w-[686px] object-cover test w-full h-[312px] mb-10"
               src={imgSrc}
+              alt="tabImg"
             />
             {desc}
           </TabPanel>

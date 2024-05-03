@@ -6,6 +6,7 @@ import Loader from "../components/ui/Loader";
 import SmoothScrolling from "../components/ui/SmoothScroll";
 import HoverExpandImages from "../components/HoverExpandImages";
 import AnimationUtils from "../utils/animations";
+import CustomCursor from "../utils/customcursor";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,10 +26,12 @@ const Home = () => {
         ) : (
           <>
             {/* <Loader /> */}
-            <Banner />
-            <PropertyList />
-            <ApprochTab />
-            <HoverExpandImages />
+            <CustomCursor cursor=".v-cursor" dot=".v-dot">
+              <Banner />
+              <PropertyList />
+              <ApprochTab />
+              <HoverExpandImages />
+            </CustomCursor>
           </>
         )}
       </>

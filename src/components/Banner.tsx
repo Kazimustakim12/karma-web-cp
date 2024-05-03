@@ -186,38 +186,50 @@ const Banner = () => {
         <div className="absolute text-center flex flex-col justify-center items-center  z-10 overflow-visible w-full h-svh img-wrraper-div">
           <div className="img-revel-wrapper z-[3]" id="img1">
             <img
+              loading="lazy"
               className="object-cover w-56 h-[20rem] "
               src="/assets/images/house-images/house-11.webp"
+              alt="house-11"
             />
           </div>
           <div className="img-revel-wrapper z-[2]" id="img2">
             <img
+              loading="lazy"
               className="object-cover w-56 h-[20rem] "
               src="/assets/images/house-images/house-12.webp"
+              alt="house-12"
             />
           </div>
           <div className="img-revel-wrapper z-[1]" id="img3">
             <img
+              loading="lazy"
               className="object-cover w-[34rem] h-[20rem]"
               src="/assets/images/house-images/house-13.webp"
+              alt="house-13"
             />
           </div>
           <div className="img-revel-wrapper z-[0]" id="img4">
             <img
+              loading="lazy"
               className="object-cover w-[22rem] h-[15rem] "
               src="/assets/images/house-images/house-14.webp"
+              alt="house-14"
             />
           </div>
           <div className="img-revel-wrapper z-[-1]" id="img5">
             <img
+              loading="lazy"
               className="object-cover w-[34rem] h-[20rem]"
               src="/assets/images/house-images/house-15.webp"
+              alt="house-15"
             />
           </div>
           <div className="img-revel-wrapper z-[-1]" id="img6">
             <img
+              loading="lazy"
               className="object-cover w-96 h-64 "
               src="/assets/images/house-images/house-16.webp"
+              alt="house-16"
             />
           </div>
           <div className="flex flex-col items-center justify-center center-para z-10">

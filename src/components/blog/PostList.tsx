@@ -78,6 +78,7 @@ export default function PostList({ post }: postProps) {
                   src={imageProps}
                   className="object-cover transition-all h-[280px] w-full"
                   loading="lazy"
+                  alt="post-img"
                 />
               ) : (
                 <ImagePlaceHolder />
@@ -108,7 +109,11 @@ export default function PostList({ post }: postProps) {
                   <div className="flex items-center gap-3">
                     <div className="relative h-5 w-5 flex-shrink-0 rounded-full overflow-hidden">
                       {post?.author?.node?.avatar && (
-                        <img src={post.author.node.avatar.url} loading="lazy" />
+                        <img
+                          src={post.author.node.avatar.url}
+                          loading="lazy"
+                          alt="User-avatar"
+                        />
                       )}
                     </div>
                     <span className=" text-sm capitalize">

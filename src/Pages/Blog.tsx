@@ -152,6 +152,7 @@ const Blog = () => {
                           <img
                             src={post?.author?.node?.avatar?.url}
                             loading="lazy"
+                            alt="author-avtar"
                           />
                         </div>
                         <span className=" text-sm capitalize">
