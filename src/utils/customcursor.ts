@@ -48,7 +48,6 @@ const CustomCursor: React.FC<CursorOptions> = ({
 
     const animateit = (event: Event) => {
       const nav = event.target as HTMLElement;
-      console.log("nav span", event.type);
       if (nav) {
         const { offsetX: x, offsetY: y } = event as MouseEvent;
         const { offsetWidth: width, offsetHeight: height } = nav;
@@ -93,7 +92,6 @@ const CustomCursor: React.FC<CursorOptions> = ({
 
     if (links) {
       const arr = document.querySelectorAll<HTMLElement>(`.${links}`);
-      console.log(arr, "list Links form the navlink");
       arr.forEach((el) => {
         el.addEventListener("mousemove", makeLink);
         el.addEventListener("mouseout", reset);
@@ -110,7 +108,6 @@ const CustomCursor: React.FC<CursorOptions> = ({
 
     if (images) {
       const arr = document.querySelectorAll<HTMLElement>(`.${images}`);
-      console.log(arr, "list images");
 
       arr.forEach((el) => {
         el.addEventListener("mouseover", makeImg);

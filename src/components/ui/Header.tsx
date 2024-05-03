@@ -165,7 +165,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="menu-copy flex flex-col justify-center items-end lg:pr-28 lg:pt-24 md:pr-5 md:pt-5 h-[80vh]">
+          <div className="menu-copy flex flex-col justify-center items-end lg:pr-15 lg:pt-24 md:pr-5 md:pt-5 h-[80vh]">
             {navPath.map((item) => {
               return (
                 <li
@@ -174,7 +174,7 @@ const Header = () => {
                 >
                   <div
                     onClick={toggleMenu}
-                    className="menu-link-item-holder p-0 overflow-hidden relative lg:mr-16 mr-[16px] flex item-center justify-center hover:text-green group hover:font-bold mb-0"
+                    className="menu-link-item-holder p-0 overflow-hidden relative lg:mr-[36px] mr-[16px] flex item-center justify-center hover:text-green group hover:font-bold mb-0"
                   >
                     <span className="font-bold lg:text-lg text-sm">
                       ({item.id})
