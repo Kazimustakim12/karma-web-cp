@@ -290,6 +290,19 @@ Banner Style For initial  animation  */
     height: 200px;
     object-fit: cover;
   }
+  .v-cursor.link {
+    /*height: 50px;
+    width: 50px;
+    */
+    background-color: #fddbbc;
+    border: 3px solid rgba(224, 222, 255, 0);
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%) scale(1) !important;
+    -webkit-transform: translate(-50%, -50%) scale(1) !important;
+    -moz-transform: translate(-50%, -50%) scale(1) !important;
+    -ms-transform: translate(-50%, -50%) scale(1) !important;
+    -o-transform: translate(-50%, -50%) scale(1) !important;
+  }
   .imgWrapper.initial_img .img-revel-wrapper:nth-child(1) {
     top: 0%;
     left: 5%;

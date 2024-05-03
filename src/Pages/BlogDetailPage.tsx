@@ -25,7 +25,7 @@ const BlogDetailPage = () => {
           </div>
         ) : !loading && data?.post !== null ? (
           <div className="container max-w-[770px] mx-auto mt-10">
-            <div className="rounded-xl sticky top-10 z-50 bg-black custom_breadcrumb gs_reveal">
+            <div className="rounded-xl sticky top-10 z-50 bg-black custom_breadcrumb ">
               <Breadcrumbs
                 fullWidth={true}
                 className="px-5 py-3 mb-10 rounded-xl bg-black  text-primary-500"

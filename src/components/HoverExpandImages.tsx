@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { RightArrow } from "./ui/IconsSVg";
 
 const HoverExpandImages = () => {
   const PropertyListArray = [
@@ -54,11 +55,11 @@ const HoverExpandImages = () => {
                     {item.title}
                   </div>
                 </div>
-                {/* <div className="lg:h-[60px] lg:w-[90px] w-[60px] h-[40px] px-2.5 py-5 bg-white group-hover:bg-white bg-opacity-0 rounded-[50px] border border-white backdrop-blur-[20.40px] justify-center items-center gap-2.5 flex">
+                <div className="lg:h-[60px] lg:w-[90px] w-[60px] h-[40px] px-2.5 py-5 bg-white group-hover:bg-white bg-opacity-0 rounded-[50px] border border-white backdrop-blur-[20.40px] justify-center items-center gap-2.5 flex">
                   <div className="w-[39px] h-[39px] relative flex justify-center">
                     <RightArrow className="fill-white group-hover:fill-text-black md:w-auto w-[20px]" />
                   </div>
-                </div> */}
+                </div>
               </Link>
             </div>
           );

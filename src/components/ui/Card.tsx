@@ -1,3 +1,5 @@
+import { RightArrow } from "./IconsSVg";
+
 const Card = ({
   title,
   info,
@@ -34,11 +36,11 @@ const Card = ({
                 {info}
               </div>
             </div>
-            {/* <div className="md:h-[60px] md:w-[90px] w-[40px] h-[40px] px-2.5 py-5 bg-white bg-opacity-0 rounded-[50px] border group-hover:bg-white border-white backdrop-blur-[20.40px] justify-center items-center gap-2.5 flex">
+            <div className="md:h-[60px] md:w-[90px] w-[40px] h-[40px] px-2.5 py-5 bg-white bg-opacity-0 rounded-[50px] border group-hover:bg-white border-white backdrop-blur-[20.40px] justify-center items-center gap-2.5 flex">
               <div className="lg:w-[39px] lg:h-[39px] relative">
                 <RightArrow className="fill-white group-hover:fill-black md:w-auto w-[20px]" />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </a>
