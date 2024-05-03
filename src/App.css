@@ -38,11 +38,11 @@
   background-color: #fddbbc;
   border: 3px solid rgba(224, 222, 255, 0);
   mix-blend-mode: difference;
-  /* transform: translate(-50%, -50%) scale(8) !important;
+  transform: translate(-50%, -50%) scale(8) !important;
   -webkit-transform: translate(-50%, -50%) scale(8) !important;
   -moz-transform: translate(-50%, -50%) scale(8) !important;
   -ms-transform: translate(-50%, -50%) scale(8) !important;
-  -o-transform: translate(-50%, -50%) scale(8) !important; */
+  -o-transform: translate(-50%, -50%) scale(8) !important;
 }
 .v-cursor.button {
   height: 60px;

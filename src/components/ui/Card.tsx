@@ -1,5 +1,3 @@
-import { RightArrow } from "./IconsSVg";
-
 const Card = ({
   title,
   info,

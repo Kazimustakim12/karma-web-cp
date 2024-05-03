@@ -110,6 +110,8 @@ const CustomCursor: React.FC<CursorOptions> = ({
 
     if (images) {
       const arr = document.querySelectorAll<HTMLElement>(`.${images}`);
+      console.log(arr, "list images");
+
       arr.forEach((el) => {
         el.addEventListener("mouseover", makeImg);
         el.addEventListener("mouseout", reset);

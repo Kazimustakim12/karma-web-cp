@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { RightArrow } from "./ui/IconsSVg";
 
 const HoverExpandImages = () => {
   const PropertyListArray = [
